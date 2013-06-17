@@ -1,0 +1,3 @@
+[submodule "build/shared/tools/underchain"]
+	path = build/shared/tools/underchain
+	url = git://github.com/underverk/SmartWatch_Toolchain.git
