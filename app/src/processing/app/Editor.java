@@ -1097,6 +1097,14 @@ public class Editor extends JFrame implements RunnerListener {
       });
     menu.add(item);
 
+    item = new JMenuItem(_("Visit Underverk"));
+    item.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          Base.openURL(_("http://github.com/underverk/"));
+        }
+      });
+    menu.add(item);
+
     // macosx already has its own about menu
     if (!Base.isMacOS()) {
       menu.addSeparator();
@@ -2197,7 +2205,7 @@ public class Editor extends JFrame implements RunnerListener {
     // Set the title of the window to "sketch_070752a - Processing 0126"
     setTitle(
       I18n.format(
-	_("{0} | Arduino {1}"),
+	_("{0} | Proof Of Concept {1}"),
 	sketch.getName(),
 	Base.VERSION_NAME
       )

@@ -75,8 +75,12 @@ public class Compiler implements MessageConsumer {
     MessageStream pms = new MessageStream(this);
 
     String avrBasePath = Base.getAvrBasePath();
-    String armToolchain = "tools/ssw-libstm32f2/"; //XXX toolchain
-    String armBasePath = "libstm32f2/"; //XXX toolchain
+    String armToolchain;
+    if (Base.isMacOS()) {
+      armToolchain = "Arduino.app/Contents/Resources/Java/tools/underchain/"; //XXX toolchain
+    } else {
+      armToolchain = "tools/underchain/"; //XXX toolchain
+    }
     Map<String, String> boardPreferences = Base.getBoardPreferences();
     String core = boardPreferences.get("build.core");
     if (core == null) {
@@ -157,7 +161,7 @@ public class Compiler implements MessageConsumer {
            }
    
    // 0.85. compile the library (straight from a makefile)
-
+/*
    sketch.setCompilingProgress(40);
     List baseLib = new ArrayList(Arrays.asList(new String[] {
       "make", "-C",  buildPath + File.separator + armBasePath, "library"
@@ -168,12 +172,12 @@ public class Compiler implements MessageConsumer {
     sketch.setCompilingProgress(50);
    
     System.out.println("library done at: " + buildPath);
-    
+*/    
    // 1.2 clean old make info
 
    sketch.setCompilingProgress(55);
     List baseClean = new ArrayList(Arrays.asList(new String[] {
-      "make", "-C",  buildPath + File.separator + "build", "clean"
+      "make", "-C",  buildPath, "clean"
     }));
 
     execAsynchronously(baseClean);
@@ -182,28 +186,28 @@ public class Compiler implements MessageConsumer {
 
     sketch.setCompilingProgress(60);
 
-   // 1.2 compile the sketch (straight from a makefile)
+   // 1.75 compile the sketch (straight from a makefile)
 
    sketch.setCompilingProgress(65);
     List baseMake = new ArrayList(Arrays.asList(new String[] {
-      "make", "-C",  buildPath + File.separator + "build", "-j4"
+      "make", "-C",  buildPath, "sketch"
     }));
-
+System.out.println(baseMake.toString());
     execAsynchronously(baseMake);
 
     sketch.setCompilingProgress(70);
 
-    String binFolder = buildPath + File.separator + "build" + File.separator + "objSTM32" + File.separator + "SSW";    
+    String binFolder = buildPath + File.separator + "bin" + File.separator;    
 
     System.out.println("check the build folder at: " + binFolder);
 
-    sizeBinary(binFolder + File.separator + "SSWMain.bin");
+    sizeBinary(binFolder + File.separator + "firmware.bin");
     
    // 2. upload the sketch
 
    sketch.setCompilingProgress(75);
     List baseUpload = new ArrayList(Arrays.asList(new String[] {
-      "dfu-util", "-d", "0FCE:F0FA", "-a", "0", "-i", "0", "-s", "0x08040000", "-D", binFolder + File.separator + "SSWMain.bin"
+      "make", "-C",  buildPath, "program"
     }));
 
     execAsynchronously(baseUpload);
@@ -211,18 +215,18 @@ public class Compiler implements MessageConsumer {
     sketch.setCompilingProgress(80);
    
    // 2.5 upload the signature
-
+/*
    sketch.setCompilingProgress(85);
     List baseSign = new ArrayList(Arrays.asList(new String[] {
       "dfu-util", "-d", "0FCE:F0FA", "-a", "0", "-i", "0", "-s", "0x080FFFFC", "-D", buildPath + File.separator + "libstm32f2" + File.separator + "sign.bin"
     }));
 
     execAsynchronously(baseSign);
-
-    sketch.setCompilingProgress(90);
-   
+*/
     System.out.println("check the build folder at: " + buildPath);
     
+    sketch.setCompilingProgress(90);
+   
     return true;
   }
 
