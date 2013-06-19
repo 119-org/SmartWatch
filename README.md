@@ -33,6 +33,7 @@ INSTALLATION
 ============
 
 I.1 Linux
+---------
 
 Get the compressed file here:
 
@@ -43,6 +44,7 @@ decompress it where ever you want to and call the executable with ./arduino
 (eventually if you faced issues, install dfu-util from Launchpad, you need version 0.7, as well as libusb 1.0.0 or newer)
 
 I.2 Mac OSX
+-----------
 
 Get the compressed file here:
 
@@ -58,6 +60,7 @@ sudo port install libsub
 Once installed, the programs will be part of the gobal path of your system and therefore it will find the compilation tools all by itself.
 
 I.3 Windows
+-----------
 
 Get the compressed file here:
 
