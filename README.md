@@ -46,7 +46,7 @@ You can of course try to compile the code in this repository, you only will need
 
 Get the compressed file here:
 
-http://underverk/blushingboy.org/ssw-SmartWatch_alpha_00001-linux.tgz
+http://underverk.blushingboy.org/ssw-SmartWatch_alpha_00001-linux.tgz
 
 decompress it where ever you want to and call the executable with ./arduino
 
