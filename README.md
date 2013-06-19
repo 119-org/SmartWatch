@@ -101,7 +101,7 @@ Uncompress it where ever you prefer, but ... you will have to configure a whole 
   
   https://launchpad.net/gcc-arm-embedded/+download
   
-  It is an executable, very easy to install.
+  It is an executable, very easy to install. Use the default installation ("yes" or "next" to every query). Just remember to select the checkbox with the option to add the toolchain to the patch.
 
 3. DFU enabling drivers: 
 
@@ -125,9 +125,9 @@ Uncompress it where ever you prefer, but ... you will have to configure a whole 
 
   Get it from here:
   
-  --
+  http://dfu-util.gnumonks.org/releases/dfu-util-0.7-binaries.7z
 
-  a. Copy the dfu-utils folder files (4 files) to C:\mingw\bin
+  a. Copy the dfu-utils subfolder files (4 files in total) to C:\MinGW\bin
 
 5. Run the installed Arduino software and Verify the sketch, which uploads it to the SmartWatch
 
