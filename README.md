@@ -32,12 +32,15 @@ This project is in the search for contributors. Here a list of desired features 
 INSTALLATION
 ============
 
+You can of course try to compile the code in this repository, you only will need a JDK from Oracle, Apache Ant, and to download the whole repository. On the other hand, if you just want to go hands on with the watch, download the precompiled IDE, prepare the toolchain and have fun!
+
+
 I.1 Linux
 ---------
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-linux.tgz
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-linux.tgz
 
 decompress it where ever you want to and call the executable with ./arduino
 
@@ -48,7 +51,7 @@ I.2 Mac OSX
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-mac.zip
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-macosx.zip
 
 decompress it in your computer and -using the Terminal- call ./arduino (NOTE!! not the Arduino.app file, but ./ardino
 
@@ -64,53 +67,76 @@ I.3 Windows
 
 Get the compressed file here:
 
---
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-windows.zip
+
+or
+
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-windows-expert.zip (if you have Java installed)
 
 Uncompress it where ever you prefer, but ... you will have to configure a whole series of things, here a list:
 
 1. Install MinGW (“mingw-get-inst-20120426”): into a folder without spaces (recommended C:\MinGW)
 
-  Get it from here:
+  Get it from here (is th exectuable):
   
-  --
+  http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/
 
-  a. Check the two alternatives at the bottom (“MSYS Basic System” and “MinGW Developer Toolkit”)
-  b. Install (takes some time)
-  c. Choose no log file
-  d. Try “make” in cmd; if it doesn’t work:
+  a. Check "use pre-packaged repository cataloges
 
-    i. Right click Computer → properties → Advanced system settings → environment variables
-    ii. Add C:\mingw\bin and C:\mingw\msys\1.0\bin (semicolon between them and NO spaces) to Path under System variables
+  b. Accept the license agreement
+
+  c. Selct the folder where to store it, make sure it doesn't have any blank spaces
+
+  d. Select the application group
+
+
+  e. Check the two alternatives at the bottom (“MSYS Basic System” and “MinGW Developer Toolkit”) and the C and C++ compilers (at the top)
+
+  f. Install (it will open a terminal window to show progress and it will take some time as it needs to download a bunch of stuff from the net)
+
+  g. Choose no log file
+
+  h. Open a command window and try to execute the "make" command; if it doesn’t work:
+
+    i. Right click Computer → properties → Advanced system settings → Environment Variables
+
+    ii. Add C:\mingw\bin and C:\MinGW\MSYS\1.0\bin (semicolon between them and NO spaces) to Path under Enviroment variables
 
 2. Install gcc-arm compiler (“gcc-arm-none-eabi-4_7-2013q1-20130313-win32”): use default options and choose Add path to environment variables
 
   Get it from here:
   
-  --
+  https://launchpad.net/gcc-arm-embedded/+download
+  
+  It is an executable, very easy to install. Use the default installation ("yes" or "next" to every query). Just remember to select the checkbox with the option to add the toolchain to the patch.
 
-3. Arduino software: uncompress; put it anywhere
+3. DFU enabling drivers: 
+
+  a. Right click Computer → properties → Device Manager
+
+  b. Set the watch in bootloading mode (turn it on as you pulg it the USB port)
+
+  c. It should show up in the list of available devices as "Newman"
+
+  d. Right click Newman → Properties: Update driver
+  
+  e. Alternatively, if it didn't show up, use the menu "Action → Add Legacy Hardware"
+
+  f. Choose Browse for drivers
+  
+  g. Select the Arduino SmartWatch driver folder, it comes with your Arduino installation
+
+  h. Choose Trust driver 
+  
+4. Install dfu-utils:
 
   Get it from here:
   
-  --
+  http://dfu-util.gnumonks.org/releases/dfu-util-0.7-binaries.7z
 
-4. DFU: right click Computer → properties → Device Manager
+  a. Copy the dfu-utils subfolder files (4 files in total) to C:\MinGW\bin
 
-  a. Newman is the SmartWatch
-  b. Right click Newman → Properties: Update driver
-  c. Choose Browse for drivers
-  d. Select the Arduino SmartWatch driver folder
-  e. Choose Trust driver 
-  
-5. Install dfu-utils:
-
-  Get it from here:
-  
-  --
-
-  a. Copy the dfu-utils folder files (4 files) to C:\mingw\bin
-
-6. Run the installed Arduino software and Verify the sketch, which uploads it to the SmartWatch
+5. Run the installed Arduino software and Verify the sketch, which uploads it to the SmartWatch
 
 
   Look for arduino.exe and happy hacking!
