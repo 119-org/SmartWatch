@@ -48,7 +48,7 @@ I.2 Mac OSX
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-mac.zip
+http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-macosx.zip
 
 decompress it in your computer and -using the Terminal- call ./arduino (NOTE!! not the Arduino.app file, but ./ardino
 
