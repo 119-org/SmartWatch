@@ -64,45 +64,45 @@ I.3 Windows
 
 Get the compressed file here:
 
---
+http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-windows.zip
 
 Uncompress it where ever you prefer, but ... you will have to configure a whole series of things, here a list:
 
 1. Install MinGW (“mingw-get-inst-20120426”): into a folder without spaces (recommended C:\MinGW)
 
-  Get it from here:
+  Get it from here (is th exectuable):
   
-  --
+  http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/mingw-get-inst-20120426/
 
-  a. Check the two alternatives at the bottom (“MSYS Basic System” and “MinGW Developer Toolkit”)
-  b. Install (takes some time)
-  c. Choose no log file
-  d. Try “make” in cmd; if it doesn’t work:
+  a. Check "use pre-packaged repository cataloges
+  b. Accept the license agreement
+  c. Selct the folder where to store it, make sure it doesn't have any blank spaces
+  d. Select the application group
+  e. Check the two alternatives at the bottom (“MSYS Basic System” and “MinGW Developer Toolkit”) and the C and C++ compilers (at the top)
+  f. Install (it will open a terminal window to show progress and it will take some time as it needs to download a bunch of stuff from the net)
+  g. Choose no log file
+  h. Open a command window and try to execute the "make" command; if it doesn’t work:
 
-    i. Right click Computer → properties → Advanced system settings → environment variables
-    ii. Add C:\mingw\bin and C:\mingw\msys\1.0\bin (semicolon between them and NO spaces) to Path under System variables
+    i. Right click Computer → properties → Advanced system settings → Environment Variables
+    ii. Add C:\mingw\bin and C:\MinGW\MSYS\1.0\bin (semicolon between them and NO spaces) to Path under Enviroment variables
 
 2. Install gcc-arm compiler (“gcc-arm-none-eabi-4_7-2013q1-20130313-win32”): use default options and choose Add path to environment variables
 
   Get it from here:
   
-  --
-
-3. Arduino software: uncompress; put it anywhere
-
-  Get it from here:
+  https://launchpad.net/gcc-arm-embedded/+download
   
-  --
+  It is an executable, very easy to install.
 
-4. DFU: right click Computer → properties → Device Manager
+3. DFU: right click Computer → properties → Device Manager
 
   a. Newman is the SmartWatch
   b. Right click Newman → Properties: Update driver
   c. Choose Browse for drivers
-  d. Select the Arduino SmartWatch driver folder
+  d. Select the Arduino SmartWatch driver folder, it comes with your Arduino installation
   e. Choose Trust driver 
   
-5. Install dfu-utils:
+4. Install dfu-utils:
 
   Get it from here:
   
@@ -110,7 +110,7 @@ Uncompress it where ever you prefer, but ... you will have to configure a whole 
 
   a. Copy the dfu-utils folder files (4 files) to C:\mingw\bin
 
-6. Run the installed Arduino software and Verify the sketch, which uploads it to the SmartWatch
+5. Run the installed Arduino software and Verify the sketch, which uploads it to the SmartWatch
 
 
   Look for arduino.exe and happy hacking!
