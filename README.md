@@ -37,7 +37,7 @@ I.1 Linux
 
 Get the compressed file here:
 
---
+http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-linux.tgz
 
 decompress it where ever you want to and call the executable with ./arduino
 
@@ -48,7 +48,7 @@ I.2 Mac OSX
 
 Get the compressed file here:
 
---
+http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-mac.zip
 
 decompress it in your computer and -using the Terminal- call ./arduino (NOTE!! not the Arduino.app file, but ./ardino
 
