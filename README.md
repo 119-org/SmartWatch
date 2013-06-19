@@ -32,6 +32,9 @@ This project is in the search for contributors. Here a list of desired features 
 INSTALLATION
 ============
 
+You can of course try to compile the code in this repository, you only will need a JDK from Oracle, Apache Ant, and to download the whole repository. On the other hand, if you just want to go hands on with the watch, download the precompiled IDE, prepare the toolchain and have fun!
+
+
 I.1 Linux
 ---------
 
