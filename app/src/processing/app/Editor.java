@@ -150,7 +150,7 @@ public class Editor extends JFrame implements RunnerListener {
 
 
   public Editor(Base ibase, String path, int[] location) {
-    super("Arduino");
+    super("Proof Of Concept");
     this.base = ibase;
 
     Base.setIcon(this);

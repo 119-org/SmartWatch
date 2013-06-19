@@ -178,6 +178,16 @@
       <fileset dir="macosx/template.app" includes="**"/>
     </copy>
     
+    <copy todir="macosx/work">
+      <fileset file="macosx/dist/arduino" />
+    </copy>
+
+    <chmod file="macosx/work/arduino" perm="755" />
+
+    <!--copy todir="macosx/work/Arduino.app/Contents/Resources/Java/hardware">
+      <fileset dir="macosx/dist" includes="tools/**" />
+    </copy-->
+    
 <!--    <rename src="macosx/work/template.app" 
 	    dest="macosx/work/Arduino.app" />
     <move file="macosx/work/template.app" 
@@ -197,17 +207,18 @@
     <!-- Unzip AVR tools -->
     <!-- <unzip dest="macosx/work/Arduino.app/Contents/Resources/Java/hardware" src="macosx/dist/tools-universal.zip" overwrite="false"/> -->
 
+    <!-- Unzip ARM tools -->
     <exec executable="unzip">
       <arg value="-q" />
       <arg value="-n" />
       <arg value="-d" />
       <arg value="macosx/work/Arduino.app/Contents/Resources/Java/hardware" />
-      <arg value="macosx/dist/tools-universal.zip" />
+      <arg value="macosx/dist/tools.zip" />
     </exec>
 
-    <copy todir="macosx/work/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include/avr">    
+    <!--copy todir="macosx/work/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include/avr">    
       <fileset file="macosx/dist/eeprom.h" />
-    </copy>
+    </copy-->
 
     <antcall target="assemble">
       <param name="target.path" value="macosx/work/Arduino.app/Contents/Resources/Java" />

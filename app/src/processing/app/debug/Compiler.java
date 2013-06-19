@@ -77,10 +77,12 @@ public class Compiler implements MessageConsumer {
     String avrBasePath = Base.getAvrBasePath();
     String armToolchain;
     if (Base.isMacOS()) {
-      armToolchain = "Arduino.app/Contents/Resources/Java/tools/underchain/"; //XXX toolchain
+      armToolchain = getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+      armToolchain = new File(armToolchain).getParent() + "/tools/underchain/"; //XXX toolchain
     } else {
       armToolchain = "tools/underchain/"; //XXX toolchain
     }
+    System.out.println(armToolchain);
     Map<String, String> boardPreferences = Base.getBoardPreferences();
     String core = boardPreferences.get("build.core");
     if (core == null) {
