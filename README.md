@@ -42,7 +42,7 @@ You can of course try to compile the code in this repository, you only will need
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-linux.tgz
+http://underverk/blushingboy.org/ssw-SmartWatch_alpha_00001-linux.tgz
 
 decompress it where ever you want to and call the executable with ./arduino
 
@@ -52,7 +52,7 @@ decompress it where ever you want to and call the executable with ./arduino
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-macosx.zip
+http://underverk.blushingboy.org/ssw-SmartWatch_alpha_00001-macosx.zip
 
 decompress it in your computer and -using the Terminal- call ./arduino (NOTE!! not the Arduino.app file, but ./ardino
 
@@ -67,11 +67,11 @@ Once installed, the programs will be part of the gobal path of your system and t
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-windows.zip
+http://underverk.blushingboy.org/ssw-SmartWatch_alpha_00001-windows.zip
 
 or
 
-http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-windows-expert.zip (if you have Java installed)
+http://underverk.blushingboy.org/ssw-SmartWatch_alpha_00001-expert.zip (if you have Java installed)
 
 Uncompress it where ever you prefer, but ... you will have to configure a whole series of things, here a list:
 
