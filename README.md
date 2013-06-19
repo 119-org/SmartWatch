@@ -60,10 +60,11 @@ http://underverk.blushingboy.org/ssw-SmartWatch_alpha_00001-macosx.zip
 
 decompress it in your computer and -using the Terminal- call ./arduino (NOTE!! not the Arduino.app file, but ./ardino
 
-For this to work, you need to hve either MacPorts or Brew installed. If you used MacPorts, the commands to issue should be:
+For this to work, you need to have either MacPorts or Brew installed. If you used MacPorts, the commands to issue should be:
 
-sudo port install dfu-util
-sudo port install libsub
+  sudo port install dfu-util
+
+  sudo port install libsub
 
 Once installed, the programs will be part of the gobal path of your system and therefore it will find the compilation tools all by itself.
 
