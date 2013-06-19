@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stm32f2xx_rtc.h>
 
-static const char hex[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B
-', 'C', 'D', 'E', 'F'};
+static const char hex[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
 void setup() {
   digitalWrite(BUZZER, HIGH);
