@@ -5,6 +5,10 @@ This repository is for the full Arduino IDE development environment to easily co
 If you are looking to compile directly from the command line, please visit:  
 https://github.com/underverk/SmartWatch_Toolchain  
 
+Note that the repository linked above contains the `master` of the toolchain used by the IDE.
+If you want the latest updates that is where to get it.
+You can always update your IDE with the latest stuff by downloading the SmartWatch_Toolchain repository to replace your IDE toolchain, which is located at [your-arduino-folder]/tools/underchain
+
 ## The Watch, The Hack
 
 This is the story of a watch, a small squared-shaped watch made to make people smile while looking at it and discover a message from a loved one, a great weather prediction, or the quote of the day. 
