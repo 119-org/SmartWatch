@@ -1,11 +1,11 @@
 SmartWatch
 ==========
 
-This repository is for the full Arduino IDE development environment to easily compile for the Sony SmartWatch from a friendly interface.  
+This repository is for the full Arduino IDE development environment to easily compile for the Sony SmartWatch from a friendly interface.
 If you are looking to compile directly from the command line, please visit:  
 https://github.com/underverk/SmartWatch_Toolchain  
 
-[The Watch, The Hack]
+## The Watch, The Hack
 
 This is the story of a watch, a small squared-shaped watch made to make people smile while looking at it and discover a message from a loved one, a great weather prediction, or the quote of the day. 
 
@@ -16,7 +16,7 @@ You are visiting the repository of liberation! The lack of freedom is bug #1 in 
 /us
 
 PULL REQUESTS WANTED
-====================
+--------------------
 
 This project is in the search for contributors. Here a list of desired features that would make everyone happy:
 
@@ -33,13 +33,12 @@ This project is in the search for contributors. Here a list of desired features 
 - ... 
 
 INSTALLATION
-============
+------------
 
 You can of course try to compile the code in this repository, you only will need a JDK from Oracle, Apache Ant, and to download the whole repository. On the other hand, if you just want to go hands on with the watch, download the precompiled IDE, prepare the toolchain and have fun!
 
 
-I.1 Linux
----------
+## I.1 Linux
 
 Get the compressed file here:
 
@@ -49,8 +48,7 @@ decompress it where ever you want to and call the executable with ./arduino
 
 (eventually if you faced issues, install dfu-util from Launchpad, you need version 0.7, as well as libusb 1.0.0 or newer)
 
-I.2 Mac OSX
------------
+## I.2 Mac OSX
 
 Get the compressed file here:
 
@@ -65,8 +63,7 @@ sudo port install libsub
 
 Once installed, the programs will be part of the gobal path of your system and therefore it will find the compilation tools all by itself.
 
-I.3 Windows
------------
+## I.3 Windows
 
 Get the compressed file here:
 
