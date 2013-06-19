@@ -3,7 +3,7 @@ SmartWatch
 
 This repository is for the full Arduino IDE development environment to easily compile for the Sony SmartWatch from a friendly interface.  
 If you are looking to compile directly from the command line, please visit:  
-`https://github.com/underverk/SmartWatch_Toolchain`  
+https://github.com/underverk/SmartWatch_Toolchain  
 
 [The Watch, The Hack]
 
