@@ -37,7 +37,7 @@ I.1 Linux
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-linux.tgz
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-linux.tgz
 
 decompress it where ever you want to and call the executable with ./arduino
 
@@ -48,7 +48,7 @@ I.2 Mac OSX
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-macosx.zip
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-macosx.zip
 
 decompress it in your computer and -using the Terminal- call ./arduino (NOTE!! not the Arduino.app file, but ./ardino
 
@@ -64,7 +64,11 @@ I.3 Windows
 
 Get the compressed file here:
 
-http://blushingboy.org/underverk/arduino-SmartWatch_alpha_00001-windows.zip
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-windows.zip
+
+or
+
+http://blushingboy.org/underverk/ssw-SmartWatch_alpha_00001-windows-expert.zip (if you have Java installed)
 
 Uncompress it where ever you prefer, but ... you will have to configure a whole series of things, here a list:
 
