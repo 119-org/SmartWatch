@@ -361,7 +361,7 @@
     </copy-->
 
     <!-- ARM tools -->
-    <unzip dest="linux/work/hardware/tools" src="linux/dist/tools/arm.zip" overwrite="false"/>
+    <unzip dest="linux/work/hardware/tools" src="inux/dist/tools/arm.zip" overwrite="false"/>
 
   </target>
   
