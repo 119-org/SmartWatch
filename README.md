@@ -27,6 +27,16 @@ Please note that this repository has submodules!
 If you, on the other hand, just want to get started quickly:  
 [HOW TO INSTALL](https://github.com/underverk/SmartWatch/wiki/Installing-the-IDE)  
 
+LOADING PROGRAMS INTO THE WATCH
+-------------------------------
+
+All you need to do is write your code in the IDE, and hit compile!  
+The IDE will compile AND initiate the programming process...  
+
+BUT - the watch needs to be in DFU bootloader mode!  
+[HOW TO GET INTO DFU MODE](https://github.com/underverk/SmartWatch/wiki/Doing-the-DFU)  
+
+Also read this if you brick your watch!
 
 PULL REQUESTS WANTED
 --------------------
