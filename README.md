@@ -30,13 +30,13 @@ If you, on the other hand, just want to get started quickly:
 LOADING PROGRAMS INTO THE WATCH
 -------------------------------
 
-All you need to do is write your code in the IDE, and hit compile!  
+All you need to do is write your code in the IDE, and hit compile.  
 The IDE will compile AND initiate the programming process...  
 
-BUT - the watch needs to be in DFU bootloader mode!  
+BUT - the watch needs to be in DFU bootloader mode! (also read this if you brick your watch)  
 [HOW TO GET INTO DFU MODE](https://github.com/underverk/SmartWatch/wiki/Doing-the-DFU)  
 
-Also read this if you brick your watch!
+
 
 PULL REQUESTS WANTED
 --------------------
