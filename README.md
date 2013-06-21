@@ -18,7 +18,7 @@ You are visiting the repository of liberation! The lack of freedom is bug #1 in 
 INSTALLATION
 ------------
 
-You should of course try to compile the code in this repository, you will need a JDK from Oracle and Apache Ant.  
+You should of course try to compile the code in this repository, you will need a JDK from Oracle and Apache Ant.
 This way you can contribute by making changes and pushing back your improvements.  
 
 Please note that this repository has submodules!  
