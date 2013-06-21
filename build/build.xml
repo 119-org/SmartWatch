@@ -356,18 +356,13 @@
     <copy todir="linux/work" file="linux/dist/arduino" />
     <chmod perm="755" file="linux/work/arduino" />
 
-    <copy todir="linux/work/hardware">
+    <!--copy todir="linux/work/hardware">
       <fileset dir="linux/dist" includes="tools/**" />
-    </copy>
+    </copy-->
 
-    <chmod perm="755" file="linux/work/hardware/tools/avrdude" />
-  </target>
+    <!-- ARM tools -->
+    <unzip dest="linux/work/hardware/tools" src="linux/dist/tools/arm.zip" overwrite="false"/>
 
-  <target name="linux-arm" depends="linux-build" description="ARM toolchain">
-    <!-- Unzip ARM tools -->
-    <exec executable="unzip" dir="linux/work/hardware/tools">
-      <arg value="linux/dist/tools/arm.zip"/>
-    </exec>
   </target>
   
   <target name="linux32-build" depends="linux-build" description="Build linux (32-bit) version">
@@ -376,7 +371,7 @@
   <target name="linux64-build" depends="linux-build" description="Build linux (64-bit) version">
     <copy tofile="linux/work/lib/librxtxSerial.so" file="linux/dist/lib/librxtxSerial64.so" overwrite="true" />
 
-    <chmod perm="755" file="linux/work/hardware/tools/avrdude" />
+    <!--chmod perm="755" file="linux/work/hardware/tools/avrdude" /-->
   </target>
 
   <target name="linux32-run" depends="linux32-build" 

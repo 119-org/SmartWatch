@@ -19,6 +19,6 @@ export LD_LIBRARY_PATH
 
 export PATH="${APPDIR}/java/bin:${APPDIR}/hardware/tools/arm/bin:${PATH}"
 
-chmod -R 777 ${APPDIR}/hardware/tools/arm
+chmod -R 777 "${APPDIR}/hardware/tools/arm"
 
 java -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel processing.app.Base "$@"
