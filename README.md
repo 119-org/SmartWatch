@@ -19,9 +19,7 @@ INSTALLATION
 ------------
 
 You should of course try to compile the code in this repository, you will need a JDK from Oracle and Apache Ant.
-This way you can contribute by making changes and pushing back your improvements.  
-
-Please note that this repository has submodules:  
+This way you can contribute by making changes and pushing back your improvements. Note that the repository has submodules:  
 [HOW TO CLONE SUBMODULES](https://github.com/underverk/SmartWatch/wiki/Cloning-Submodules)  
 
 If you, on the other hand, just want to get started quickly:  
