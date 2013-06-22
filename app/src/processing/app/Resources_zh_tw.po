@@ -438,8 +438,8 @@ msgstr "http://www.arduino.cc/latest.txt"
 
 #: UpdateCheck.java:103
 msgid ""
-"A new version of Arduino is available,\n"
-"would you like to visit the Arduino download page?"
+"A new version of Open SmartWatch is available,\n"
+"would you like to visit the Open SmartWatch download page?"
 msgstr ""
 "Arduino有新版本了，\n"
 "你想要開啟Arduino的下載頁面嗎？"
