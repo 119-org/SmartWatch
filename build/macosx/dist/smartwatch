@@ -1,0 +1,9 @@
+#!/bin/sh
+ 
+APPDIR="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
+
+export PATH="${APPDIR}/java/bin:${APPDIR}/SmartWatch.app/Contents/Resources/Java/hardware/tools/arm/bin:${PATH}"
+
+chmod -R 777 ${APPDIR}/SmartWatch.app/Contents/Resources/Java/hardware/tools/arm
+
+open -n ./SmartWatch.app
