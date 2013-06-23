@@ -10,6 +10,8 @@ https://github.com/underverk/SmartWatch_Toolchain
 This is the story of a watch, a small squared-shaped watch made to make people smile while looking at it and discover a message from a loved one, a great weather prediction, or the quote of the day. 
 The watch was pretty smart, as normal watches cannot do such things, but it had a small issue ... it was closed source. A bunch of hackers with a mission, decided to give the watch a small present... it's own freedom. They worked on it day and night, and day... and probably yet another night... until they got a working toolchain and a hack of the Arduino's IDE to allow the watch to run applications compiled by -literally- anyone.
 You are visiting the repository of liberation! The lack of freedom is bug #1 in every system. Someone made this for all of us, so download it and contribute!
+  
+IRC: freenode/#open-ssw  
 
 /us
 
