@@ -440,8 +440,8 @@ msgstr ""
 
 #: UpdateCheck.java:103
 msgid ""
-"A new version of Arduino is available,\n"
-"would you like to visit the Arduino download page?"
+"A new version of Open SmartWatch is available,\n"
+"would you like to visit the Open SmartWatch download page?"
 msgstr ""
 "नया अर्दुइनो सॉफ्टवेर उपलभ्द है\n"
 "क्या आप अर्दुइनो डाउनलोड पेज  पे जाना चाहेंगे ? "
