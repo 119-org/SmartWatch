@@ -1,10 +1,6 @@
 0010 smartwatch
 
-This is a major revision, it got a weird codename!!
-
-ANACHRONISTIC PITCHFORK
-
-Until here we used Arduino's IDE development line (rev 105). This is the moment in time when both IDEs go away from each other. This revision implements the following:
+Until here we used Arduino's IDE development line. This is the moment in time when both IDEs go away from each other. This revision implements the following:
 
 - SmartWatch Toolchain under tools/underchain
 - added smartwatch specific IDE version checker
