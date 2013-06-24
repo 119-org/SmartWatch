@@ -94,7 +94,7 @@ public class UpdateCheck implements Runnable {
         long when = Long.parseLong(lastString);
         if (now - when < ONE_DAY) {
           // don't annoy the shit outta people
-         //XXX force check every time return;
+          return;
         }
       }
       Preferences.set("update.last", String.valueOf(now));

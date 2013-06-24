@@ -53,7 +53,7 @@ public class Compiler implements MessageConsumer {
   public Compiler() { }
 
   /**
-   * Compile with whatever makefile.
+   * Compile with avr-gcc.
    *
    * @param sketch Sketch object to be compiled.
    * @param buildPath Where the temporary files live and will be built from.
@@ -78,9 +78,9 @@ public class Compiler implements MessageConsumer {
     String armToolchain;
     if (Base.isMacOS()) {
       armToolchain = getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
-      armToolchain = new File(armToolchain).getParent() + "/tools/underchain/"; 
+      armToolchain = new File(armToolchain).getParent() + "/tools/underchain/"; //XXX toolchain
     } else {
-      armToolchain = "tools/underchain/"; 
+      armToolchain = "tools/underchain/"; //XXX toolchain
     }
     System.out.println(armToolchain);
     Map<String, String> boardPreferences = Base.getBoardPreferences();
@@ -162,9 +162,22 @@ public class Compiler implements MessageConsumer {
             //System.exit(0);
            }
    
+   // 0.85. compile the library (straight from a makefile)
+/*
+   sketch.setCompilingProgress(40);
+    List baseLib = new ArrayList(Arrays.asList(new String[] {
+      "make", "-C",  buildPath + File.separator + armBasePath, "library"
+    }));
+
+    execAsynchronously(baseLib);
+
+    sketch.setCompilingProgress(50);
+   
+    System.out.println("library done at: " + buildPath);
+*/    
    // 1.2 clean old make info
 
-   sketch.setCompilingProgress(30);
+   sketch.setCompilingProgress(55);
     List baseClean = new ArrayList(Arrays.asList(new String[] {
       "make", "-C",  buildPath, "clean"
     }));
@@ -173,18 +186,18 @@ public class Compiler implements MessageConsumer {
 
     System.out.println("now: " + buildPath + " is shinny");
 
-    sketch.setCompilingProgress(40);
+    sketch.setCompilingProgress(60);
 
    // 1.75 compile the sketch (straight from a makefile)
 
-   sketch.setCompilingProgress(50);
+   sketch.setCompilingProgress(65);
     List baseMake = new ArrayList(Arrays.asList(new String[] {
       "make", "-C",  buildPath, "sketch"
     }));
 System.out.println(baseMake.toString());
     execAsynchronously(baseMake);
 
-    sketch.setCompilingProgress(60);
+    sketch.setCompilingProgress(70);
 
     String binFolder = buildPath + File.separator + "bin" + File.separator;    
 
@@ -194,7 +207,7 @@ System.out.println(baseMake.toString());
     
    // 2. upload the sketch
 
-   sketch.setCompilingProgress(70);
+   sketch.setCompilingProgress(75);
     List baseUpload = new ArrayList(Arrays.asList(new String[] {
       "make", "-C",  buildPath, "program"
     }));
@@ -203,6 +216,15 @@ System.out.println(baseMake.toString());
 
     sketch.setCompilingProgress(80);
    
+   // 2.5 upload the signature
+/*
+   sketch.setCompilingProgress(85);
+    List baseSign = new ArrayList(Arrays.asList(new String[] {
+      "dfu-util", "-d", "0FCE:F0FA", "-a", "0", "-i", "0", "-s", "0x080FFFFC", "-D", buildPath + File.separator + "libstm32f2" + File.separator + "sign.bin"
+    }));
+
+    execAsynchronously(baseSign);
+*/
     System.out.println("check the build folder at: " + buildPath);
     
     sketch.setCompilingProgress(90);

@@ -102,7 +102,7 @@ public class UpdateCheck implements Runnable {
       String prompt =
         _("A new version of Open SmartWatch is available,\n" +
           "would you like to visit the Open SmartWatch download page?");
- System.out.println(Base.REVISION); //XXX       
+
       if (base.activeEditor != null) {
         if (latest > Base.REVISION) {
           Object[] options = { _("Yes"), _("No") };

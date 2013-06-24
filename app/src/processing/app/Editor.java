@@ -2653,6 +2653,22 @@ public class Editor extends JFrame implements RunnerListener {
   }
 
 
+  /**
+   * Show the indeterminate percentage bar in the editor status bar.
+   */
+  public void statusIndeterminate(String msg) {
+    status.progressIndeterminate(msg);
+  }
+
+
+  /**
+   * Hide the indeterminate percentage bar in the editor status bar.
+   */
+  public void statusUnprogress() {
+    status.unprogress();
+  }
+
+
   // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
   protected void onBoardOrPortChange() {
